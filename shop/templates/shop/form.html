@@ -1,0 +1,44 @@
+{% extends 'shop/layouts/main.html' %}
+{% include 'shop/inc/message.html' %}
+{% block content %}
+<div class="container "style="margin-top:70px;margin-bottom:30px">
+    <div class="row">
+        <div class="col-12">
+            <h4 class="mb-3">Shipment Details </h4>
+            <hr class="border-color:#b8bfc2;">
+            {% include 'shop/inc/message.html' %}
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label form="" class="form-label">First Name</label>
+                         <input type="text" name="fname" id="firstname" class="form-control" placeholder="Enter First Name">
+                    </div>
+                    <div class="mb-4">
+                        <label form="" class="form-label">Last Name</label>
+                         <input type="text" name="lname" id="lastname" class="form-control" placeholder="Enter Last Name">
+                    </div>
+                    <div class="mb-4">
+                        <label form="" class="form-label">E-mail</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your E-mail id">
+                    </div>
+                    <div class="mb-4">
+                        <label form="" class="form-label">Mobile</label>
+                        <input type="number" name="pno" id="pno" class="form-control" placeholder="Enter Your Mobile number">
+                    </div>
+                    <div class="mb-4">
+                        <label form="" class="form-label">Address</label>
+                         <input type="" name="address"id="address" class="form-control"placeholder="Enter Your Address">
+                    </div>
+                    <button type="submit" class="btn btn-primary ">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %} 

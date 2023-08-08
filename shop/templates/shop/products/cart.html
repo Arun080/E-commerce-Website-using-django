@@ -1,0 +1,21 @@
+{% extends 'shop/layouts/main.html' %}
+{% include 'shop/inc/message.html' %}
+<table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Item Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in cart.cartitem_set.all %}
+      <tr>
+        <td>{{ item.product.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.item_total }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}   
